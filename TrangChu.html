@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="type.css">
+  <title>160STORE - Chuỗi Phân Phối Thời Trang Nam Chuẩn Hiệu</title>
+</head>
+<body>
+  <header class="top-header"> 
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://file.hstatic.net/1000253775/file/logo_no_bf-05_3e6797f31bda4002a22464d6f2787316.png" alt="Logo">
+    </div>
+    <!-- Thanh tìm kiếm -->
+      <div class="search-box">
+        <input type="text" placeholder="Bạn đang tìm gì...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <!-- Icon -->
+      <div class="header-icons">
+        <a href="#"><i class="fas fa-store"></i> Cửa hàng</a>
+        <a href="#"><i class="fas fa-user"></i> Đăng nhập</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+      </div>
+  </header>
+<nav>
+      <!-- Menu -->
+      <ul class="menu">
+        <li><a href="#hangmoi">Hàng Mới</a>
+    <!--- -->
+        </li>
+        <li><a href="#">Sản Phẩm</a>
+          <ul class ="submenu">
+            <li><a href="#">Áo</a>
+              <ul>
+                <li><a href="#">Áo thun</a></li>
+                <li><a href="#">Áo Polo</a></li>
+                <li><a href="#">Áo sơ mi</a></li>
+                <li><a href="#">Áo khoác</a></li>
+                <li><a href="#">Áo nỉ-sweater</a></li>
+                <li><a href="#">Áo ba lỗ</a></li>
+                <li><a href="#">Áo hoodie</a></li>
+                <li><a href="#">Áo len</a></li>  
+              </ul>
+            </li>
+            <!--- -->
+            <li><a href="#">Quần</a>
+              <ul>
+                <li><a href="#">Quần jean</a></li>
+                <li><a href="#">Quần short</a></li>
+                <li><a href="#">Quần tây</a></li>
+                <li><a href="#">Quần jogger-quần dài</a></li>
+                <li><a href="#">Quần kaki</a></li>
+              </ul>
+            </li>
+            <!--- -->
+            </li>
+            <li><a href="#">Phụ Kiện</a>
+              <ul>
+                <li><a href="#">Nón</a></li>
+                <li><a href="#">Thắt lưng</a></li>
+                <li><a href="#">Túi xách</a></li>
+                <li><a href="#">Balo</a></li>
+                <li><a href="#">Khăn quàng cổ</a></li>
+                <li><a href="#">Găng tay</a></li>
+                <li><a href="#">Mắt kính</a></li>
+                <li><a href="#">Đồng hồ</a></li>
+              </ul>
+            </li>
+            
+          
+        <!--- -->
+        <li><a href="#">Áo Nam</a>
+        </li>
+        <li><a href="#">Quần Nam</a></li>
+        <li><a href="#">Phụ Kiện</a></li>
+        <li><a href="#">Outlet</a></li>
+        <li><a href="#">Disney</a></li>
+        <li><a href="#">Jeans</a></li>
+      </ul>
+      <!--- -->
+      <li><a href="#">Áo Nam</a>
+        <ul>
+          <li><a href="#">Áo thun</a></li>
+          <li><a href="#">Áo Polo</a></li>
+          <li><a href="#">Áo sơ mi</a></li>
+          <li><a href="#">Áo khoác</a></li>
+          <li><a href="#">Áo nỉ-sweater</a></li>
+          <li><a href="#">Áo ba lỗ</a></li>
+          <li><a href="#">Áo hoodie</a></li>
+          <li><a href="#">Áo len</a></li>
+        </ul>
+    <!--- -->
+      <li><a href="#">Quần Nam</a>
+        <ul>
+          <li><a href="#">Quần jean</a></li>
+          <li><a href="#">Quần short</a></li>
+          <li><a href="#">Quần tây</a></li>
+          <li><a href="#">Quần jogger-quần dài</a></li>
+          <li><a href="#">Quần kaki</a></li>
+          <li><a href="#">Set Quần áo</a></li>
+          <li><a href="#">Quần boxer</a></li>
+        </ul>
+       <!--- --> 
+      <li><a href="#">Phụ Kiện</a>
+        <ul>
+          <li><a href="#">Nón</a></li>
+          <li><a href="#">Thắt lưng</a></li>
+          <li><a href="#">Túi xách</a></li>
+          <li><a href="#">Mắt kính</a></li>
+          <li><a href="#">Vớ</a></li>
+        </ul>
+      <!--- --> 
+</nav>
+    <div class="slider">
+       <div class="slides">
+          <div class="slide"><img src="https://file.hstatic.net/1000253775/file/banner_pc_3688a7ee993a48a3aa2ceda425abfa7b.jpg" alt="" width="1150"></div>
+          <div class="slide"><img src="https://cdn.hstatic.net/files/1000253775/file/store_160_dk.jpg" alt="" width="1150"></div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+      <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+  <!-- Slider Script chuyển tag hình -->
+  <script>
+    let currentSlide = 0;
+    function moveSlide(step) {
+      const slides = document.querySelectorAll(".slide");
+      currentSlide = (currentSlide + step + slides.length) % slides.length;
+      document.querySelector(".slides").style.transform =`translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Tự động chuyển slide sau mỗi 3 giây
+    setInterval(function() {
+      moveSlide(1);
+    }, 3000);
+  </script>  
+  <!--- -->
+
+<blockquote><h3>Ưu Đãi Dành Cho Bạn</h3></blockquote>
+
+<div class="voucher-list">
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>160SALE</strong></div>
+    <div class="voucher-info">Giảm 10% cho đơn hàng từ 500.000đ<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('160SALE')">Sao chép mã</button>
+  </div>
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>FREESHIP</strong></div>
+    <div class="voucher-info">Miễn phí vận chuyển cho đơn từ 300.000đ<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('FREESHIP')">Sao chép mã</button>
+  </div>
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>SALE20</strong></div>
+    <div class="voucher-info">Giảm 20% cho đơn từ 1.000.000đ<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('SALE20')">Sao chép mã</button>
+  </div>
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>NEWMEM</strong></div>
+    <div class="voucher-info">Giảm 50.000đ cho khách mới<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('NEWMEM')">Sao chép mã</button>
+  </div>
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>HOTDEAL</strong></div>
+    <div class="voucher-info">Giảm 15% cho sản phẩm HOT<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('HOTDEAL')">Sao chép mã</button>
+  </div>
+  <div class="voucher">
+    <div class="voucher-code"><span>Mã giảm giá:</span> <strong>DISNEY10</strong></div>
+    <div class="voucher-info">Giảm 10% cho sản phẩm Disney<br><small>Áp dụng đến 30/09/2025</small></div>
+    <button class="copy-btn" onclick="copyVoucher('DISNEY10')">Sao chép mã</button>
+  </div>
+</div>
+
+<script>
+  function copyVoucher(code) {
+    navigator.clipboard.writeText(code);
+    alert('Đã sao chép mã giảm giá: ' + code);
+  }
+</script>
+  <!--- -->
+  <div class="center-image" id="hangmoi">
+  <img src="https://file.hstatic.net/1000253775/file/banner_h_ng_m_i_6__1_.jpg" alt="hình mới" width="1150">
+  </div>
+  <!--- -->
+  <div class="product-list">
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/setDoDen.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_set_bo_006-1_acce9c6ad99f4feaae5c2d32f09fb76d_large.jpg" alt="hình set áo nam" width="300">
+      <div class="product-info">
+        <h4>Set Đồ Nam RUNPOW Airflow Mesh Jersey</h4>
+        <p class="price">Giá: <span class="new-price">299.000đ</span> <span class="old-price">~608.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/aoPoLo.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_ao_polo_237-1_5cbb21b31fbb4b02b4e7b23c2cfe50bb_large.jpg" alt="hình áo polo" width="300">
+      <div class="product-info">
+        <h4>Áo Polo Nam ICONDENIM Shoulder Line</h4>
+        <p class="price">Giá: <span class="new-price">379.000đ</span> <span class="old-price">~599.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/aoThunNamTrang.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_ao_thun_637-12_030fa92282f440f4a5988d5c2340262d_large.jpg" alt="hình áo thun" width="300">
+      <div class="product-info">
+        <h4>Áo Thun Nam ICONDENIM  ICDN Basket</h4>
+        <p class="price">Giá: <span class="new-price">299.000đ</span> <span class="old-price">~399.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <!-- Sản phẩm áo thun trắng đen mới -->
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/aoThunTrangDen.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_ao_thun_618-11_0093786b9e2e4fd18526940f91461c9a_1024x1024.jpg" alt="áo thun trắng đen" width="300">
+      <div class="product-info">
+        <h4>Áo Thun Nam ICONDENIM pocket Edge</h4>
+        <p class="price">Giá: <span class="new-price">211.000đ</span> <span class="old-price">~320.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/quanShortJean.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_short_298-_14_eb0ba5e887b5487abcada4b1cfa6be66_large.jpg" alt="quần short jean" width="300">
+      <div class="product-info">
+        <h4>Quần Short Jean Nam ICONDENIM Dark Grey</h4>
+        <p class="price">Giá: <span class="new-price">35.000đ</span> <span class="old-price">~390.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/aoThunNau.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_ao_thun_583-13_04b96863b6544cf9a497e12439339831_large.jpg" alt="áo thun nâu" width="300">
+      <div class="product-info">
+        <h4>Áo Thun Nam ICONDENIM ICONDENIM Canyon</h4>
+        <p class="price">Giá: <span class="new-price">229.000đ</span> <span class="old-price">~320.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <!-- Thêm sản phẩm quần short kaki vào đây -->
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span> 
+    <a href="/ShopThoiTrang/GiaoDien/quanShort_kaki.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_short_221-11_3dc03944e4e0469ba0a5e62a489f12bb_1024x1024.jpg" alt="quần short kaki" width="300">
+      <div class="product-info">
+        <h4>Quần Short Kaki Nam ICONDENIM Corduroy OG Form Regular</h4>
+        <p class="price">Giá: <span class="new-price">329.000đ</span> <span class="old-price">~890.000đ</span></p>
+      </div>
+    </a>
+  </div>
+  <div class="product-card">
+    <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/quanDaiNau.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_kaki_053-7_aea992eed13243229319b4bd2f6f6d51_1024x1024.jpg" alt="quần jean xanh" width="300">
+      <div class="product-info">
+        <h4>Quần Khaki Nam Dài Wash ICONDENIM ID</h4>
+        <p class="price">Giá: <span class="new-price">479.000đ</span> <span class="old-price">~799.000đ</span></p>
+      </div>
+    </a>
+    </div>
+    <div class="product-card">
+      <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/soMiTayNgan.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/160_somi_301-1_5ec575d6cf564661be04a962dfee8066_large.jpg" alt="sơ mi tay ngắn" width="300">
+      <div class="product-info">
+        <h4>Áo Sơ Mi Nam Tay Ngắn ICONDENIM Crinkle Crest Shirt</h4>
+        <p class="price">Giá: <span class="new-price">379.000đ</span> <span class="old-price">~599.000đ</span></p>
+      </div> 
+    </a>
+    </div>
+    <div class="product-card">
+      <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/tuiTote.html">
+      <img src="https://cdn.hstatic.net/products/1000253775/z6912331506694_9b7aae96f4d9c235bf51e10dd67c3181_df519aaf9db14564b9884b26392d1698_large.jpg" alt="túi tote" width="300">
+      <div class="product-info">
+        <h4>Túi Tote Denim Nam ICONDENIM VIỆT NAM TRONG TIM</h4>
+        <p class="price">Giá: <span class="new-price">129.000đ</span> <span class="old-price">~299.000đ</span></p>
+      </div> 
+    </a>
+    </div>
+    <div class="product-card"> 
+      <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/thatLung.html">
+      <img src="https://product.hstatic.net/1000253775/product/that-lung-icondenim-urban-essential__11__293d7f6c57ab466ea13a11128154890a_large.jpg" alt="thắt lưng" width="300">
+      <div class="product-info">
+        <h4>Thắt Lưng Nam ICONDENIM Classic Leather Belt</h4>
+        <p class="price">Giá: <span class="new-price">299.000đ</span> <span class="old-price">~399.000đ</span></p>
+      </div>
+    </a>
+    </div>
+    <div class="product-card"> 
+      <span class="new-icon">Hàng Mới</span>
+    <a href="/ShopThoiTrang/GiaoDien/depQuaiNgang.html">
+      <img src="https://product.hstatic.net/1000253775/product/dep-quai-ngang-nam-icondenim-shade-flow__2__7d4589a380634ca3969b46ec27b9ab48_large.jpg" alt="dép quai ngang" width="300">
+      <div class="product-info">
+        <h4>Dép Quai Ngang Nam ICONDENIM Shade Flow</h4>
+        <p class="price">Giá: <span class="new-price">329.000đ</span> <span class="old-price">~599.000đ</span></p>
+      </div>
+    </div>
+</div>
+</body>
+</html>
